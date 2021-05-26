@@ -3,10 +3,24 @@ package garage;
 import java.util.ArrayList;
 
 import automotives.Vehicle;
+import utils.UserInput;
 
 public class Garage {
 	
-	ArrayList<Vehicle> garage = new ArrayList<Vehicle>();
+	private ArrayList<Vehicle> garage = new ArrayList<Vehicle>();
+	
+	private static Garage instance = null;
+	
+	private Garage() {
+		
+	}
+	
+	public static Garage getInstance() {
+		if(instance == null) {
+			instance = new Garage();
+		}
+		return instance;
+	}
 	
 	public void addVehicle(Vehicle vehicle) {
 		garage.add(vehicle);
@@ -35,7 +49,8 @@ public class Garage {
 	public double calculateCostByID(int id) {
 		for(Vehicle vehicle: garage) {
 			if(vehicle.getID() == id) {
-				return vehicle.calculateCost();
+				double yeet = vehicle.calculateCost();
+				return yeet;
 			}
 		}
 		return 0;
@@ -48,6 +63,12 @@ public class Garage {
 			}
 		}
 		removeByID(id);
+	}
+	
+	public void printGarage() {
+		for(Vehicle vehicle: garage) {
+			System.out.println(vehicle);
+		}
 	}
 	
 	public void empty() {

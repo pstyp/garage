@@ -50,6 +50,7 @@ public abstract class Vehicle {
 		this.colour = colour;
 	}
 	
+
 	public abstract double calculateCost();
 	
 }
