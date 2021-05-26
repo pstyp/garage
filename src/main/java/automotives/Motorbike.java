@@ -1,10 +1,10 @@
 package automotives;
 
 public class Motorbike extends Vehicle {
-	
+
 	private int cubicCapacity;
 	private boolean sidecar;
-	
+
 	public Motorbike(String maker, String colour, int cubicCapacity, boolean sidecar) {
 		super("Motorbike", maker, colour);
 		this.cubicCapacity = cubicCapacity;
@@ -32,6 +32,5 @@ public class Motorbike extends Vehicle {
 		// TODO Auto-generated method stub
 		return 70;
 	}
-	
-	
+
 }

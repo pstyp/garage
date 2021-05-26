@@ -1,10 +1,10 @@
 package automotives;
 
 public class Car extends Vehicle {
-	
+
 	private int wheels;
 	private int doors;
-	
+
 	public Car(String maker, String colour, int wheels, int doors) {
 		super("Car", maker, colour);
 		this.wheels = wheels;
@@ -32,5 +32,4 @@ public class Car extends Vehicle {
 		return 150;
 	}
 
-	
 }
