@@ -15,7 +15,7 @@ public class TestGarage {
 	
 	@Test
 	public void testGetGarage() {
-		assertEquals(testGarage.getGarage(), new ArrayList<Vehicle>());
+		assertEquals(new ArrayList<Vehicle>(), testGarage.getGarage());
 	}
 	
 	@Test
@@ -29,32 +29,4 @@ public class TestGarage {
 		assertEquals(testGarage.getGarage(), testArray);
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	@BeforeClass
-	public static void init() {
-		System.out.println("Before Class");
-	}
-	
-	@Before
-	public void before() {
-		System.out.println("Before");
-	}
-	
-	@After
-	public void after() {
-		System.out.println("After");
-	}
-	
-	@AfterClass
-	public static void tearDown() {
-		System.out.println("After Class");
-	}
 }

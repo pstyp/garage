@@ -36,13 +36,15 @@ public class Garage {
 	}
 
 	public void removeByType(String type) {
-		Vehicle found = null;
+		ArrayList<Vehicle> found = new ArrayList<Vehicle>();
 		for (Vehicle vehicle : garage) {
 			if (vehicle.getType() == type) {
-				found = vehicle;
+				found.add(vehicle);
 			}
 		}
-		garage.remove(found);
+		for(Vehicle destroy: found) {
+			garage.remove(destroy);
+		}
 	}
 
 	public double calculateCostByID(int id) {

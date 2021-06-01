@@ -51,6 +51,11 @@ public abstract class Vehicle {
 	}
 	
 
+	@Override
+	public String toString() {
+		return "Vehicle [ID=" + ID + ", type=" + type + ", maker=" + maker + ", colour=" + colour + "]";
+	}
+
 	public abstract double calculateCost();
 	
 }
