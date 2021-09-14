@@ -29,5 +29,27 @@ public class UserInput {
 			}
 		}
 	}
+		public double getDouble() {
+			while(true) {
+				try {
+					double input = Double.parseDouble(getString());
+					return input;
+				} catch(NumberFormatException e) {
+					e.printStackTrace();
+			}
+		}
+	}
+
+		public boolean getBoolean() {
+			while(true) {
+				try {
+					boolean input = Boolean.parseBoolean(getString());
+					return input;
+				} catch(NumberFormatException e) {
+					e.printStackTrace();
+			}
+		}
+	}
+		}
 	
-}
+

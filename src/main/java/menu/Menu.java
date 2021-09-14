@@ -16,6 +16,7 @@ public class Menu {
 			System.out.println("2) Read");
 			System.out.println("3) Delete");
 			System.out.println("4) Exit");
+			System.out.println("5) Fix");
 			int input = scan.getInt();
 			switch (input) {
 			case 1:
@@ -29,23 +30,36 @@ public class Menu {
 				break;
 			case 4:
 				break;
+			case 5:
+				fix();
 			default:
 				start();
 			}
 		}
 	}
 
+	private void fix() {
+		System.out.println("Enter ID?");
+		garage.calculateCostByID(scan.getInt());
+		garage.fixVehicleByID(scan.getInt());// TODO Auto-generated method stub
+		
+	}
+
 	private void create() {
 		System.out.println("Create what?");
 		System.out.println("1) Car");
 		System.out.println("2) Motorbike");
+		System.out.println("3) Truck");
 		int input = scan.getInt();
 		switch (input) {
 		case 1:
-			carMenu.create();
+			carMenu.createCar();
 			break;
 		case 2:
-
+			carMenu.createTruck();
+			break;
+		case 3: 
+			carMenu.createMotorbike();
 			break;
 		default:
 
@@ -53,29 +67,13 @@ public class Menu {
 	}
 
 	private void delete() {
-		System.out.println("Delete what?");
-		System.out.println("1) Car");
-		System.out.println("2) Motorbike");
-		System.out.println("3) All");
-		System.out.println("3) By ID");
-		int input = scan.getInt();
-		switch (input) {
-		case 1:
-			carMenu.delete();
-			break;
-		case 2:
-
-			break;
-		case 3:
-			garage.empty();
-		case 4:
 			System.out.println("Enter ID?");
-			garage.removeByID(scan.getInt());
-		default:
+			carMenu.delete();
+
 
 		}
 
-	}
+
 
 	private void read() {
 		garage.printGarage();
